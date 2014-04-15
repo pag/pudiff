@@ -7,7 +7,6 @@ PrettyUnifiedDiff.prototype.init = function(element) {
 	var text = element.value;
 	var hunks = this.parseHunks(text);
 	var widget = this.buildWidget(hunks);
-	console.log(widget);
 	element.parentNode.insertBefore(widget, element);
 	element.parentNode.removeChild(element);
 }
@@ -86,7 +85,6 @@ PrettyUnifiedDiff.prototype.buildWidget = function(hunks) {
 	
 	var tbody = el('tbody');
 	for(var i = 0; i < hunks.length; ++i) {
-		console.log('hunk', hunks[i]);
 		if(i != 0) {
 			tbody.appendChild(el('tr', {'class': 'sep'}, [
 				el('td', {'colspan': '4'}, el('div', {}, '...'))
