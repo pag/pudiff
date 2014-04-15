@@ -1,0 +1,42 @@
+.pretty-udiff {
+	font-size: 11px;
+	font-family: Consolas, Monaco, monospace;
+	border-collapse: collapse;
+	border: 0;
+}
+.pretty-udiff td {
+	vertical-align: top;
+	padding: .1em .5em;
+}
+.pretty-udiff .number {
+	text-align: right;
+	color: #ccc;
+}
+.pretty-udiff .number span {
+	position: relative;
+}
+.pretty-udiff .line {
+	width: 450px;
+}
+.pretty-udiff tr.add .number.left span, .pretty-udiff tr.del .number.right span {
+	display: none;
+}
+.pretty-udiff tr.del td {
+	background: #EECBC8;
+}
+.pretty-udiff tr.add td  {
+	background: #DDE8C8;
+}
+.pretty-udiff tr.del .left.number { color: #c96; }
+.pretty-udiff tr.add .right.number { color: #ac8; }
+.pretty-udiff .sep {
+	text-align: center;
+}
+.pretty-udiff .sep div {
+	background: #eee;
+	margin: 2em .5em;
+	font-size: .5em;
+	color: #aaa;
+	padding: .2em 0 .4em 3em;
+}
+

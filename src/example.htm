@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Pretty unified diff example</title>
+		
+		<link rel="stylesheet" href="./pudiff.css" />
+		<script type="text/javascript" src="./pudiff.js"></script>
+	</head>
+	
+	<body onload="new PrettyUnifiedDiff(document.getElementById('text'));">
+
+		<textarea id="text">@@ -20,19 +20,20 @@
+ hi Comment guifg=darkgrey ctermfg=darkgrey
+ " Function/class name
+ hi Identifier guifg=black ctermfg=black
+-hi PreProc guifg=darkgreen ctermfg=darkgreen
++hi PreProc guifg=#237700 ctermfg=darkgreen
+ " Variable types (e.g. 'int')
+ hi Type guifg=#005fdf gui=NONE ctermfg=26 cterm=NONe
+ hi link Constant Type
+ hi! link Directory Type
+ " ?
+ hi Special guifg=#993377
+-hi String guifg=#af0000 ctermfg=124
++hi String guifg=#ccaa33 ctermfg=124
++hi String guifg=#af5215 ctermfg=124
+ hi Number guifg=#aa8822 ctermfg=brown
+ hi link Float Number
+ 
+ " Special characters like listchars if set
+-hi SpecialKey guifg=#d0d0d0 ctermfg=252
++hi SpecialKey guifg=#e9e9e9 ctermfg=253
+ hi NonText guifg=#eeeeee ctermfg=252
+ "hi Boolean
+ "hi Gutter
+@@ -92,18 +93,25 @@
+ 
+ " Python
+ hi pythonBuiltinFunc guifg=#005fdf guibg=NONE gui=NONE ctermfg=26 ctermbg=NONE cterm=NONE
+-hi pythonBuiltinObj guifg=#008700 guibg=NONE gui=NONE ctermfg=28 ctermbg=NONE cterm=NONE
++hi link pythonBoolean pythonBuiltinObj
++hi pythonBuiltinObj guifg=#237700 guibg=NONE gui=NONE ctermfg=28 ctermbg=NONE cterm=NONE
++hi pythonImport guifg=#000000 gui=bold
+ " String formatting (v2 and v3 style)
+ hi pythonStrFormatting guifg=#00afff ctermfg=39
+ hi link pythonStrFormat pythonStrFormatting
+ hi pythonDecorator guifg=#875f00 ctermfg=94
+-"hi link pythonDottedName pythonDecorator
+-" hi link pythonDot pythonDecorator
++hi link pythonDottedName pythonDecorator
+ " #!... in a Python file
+ hi pythonRun guifg=#555555 gui=bold ctermfg=black cterm=bold
+ hi pythonCoding guifg=#335588
+ hi pythonClass guifg=#004fbf gui=BOLD ctermfg=26 cterm=BOLD
++hi pythonFunction guifg=#004fbf gui=none ctermfg=26 cterm=BOLD
++hi link pythonBuiltinFunc pythonFunction
++
+ hi pythonColon guifg=#888888
++hi pythonPunctuation guifg=#555555
++hi pythonPunctuation2 guifg=#447788
++hi pythonOperator guifg=#333333 gui=bold
+ 
+ " Patch
+ hi diffRemoved guifg=#992222 ctermfg=88
+@@ -151,7 +159,7 @@
+ highlight Conceal gui=bold guifg=#222222 guibg=NONE
+ 
+ " GUI colours
+-hi Cursor guifg=white guibg=#555555 ctermfg=white ctermbg=240
++hi Cursor guifg=white guibg=#888888 ctermfg=white ctermbg=240
+ hi clear CursorLine
+ hi CursorLine guibg=#e5efff ctermbg=255</textarea>
+	
+	</body>
+</html>
+
+<!--
+vim: ft=html
+-->
